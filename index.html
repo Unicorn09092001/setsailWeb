@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    <script src="./assets/app.js/jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <title>Winter Holidays - SetSail</title>
+    <link rel="stylesheet" href="./assets/app.css/tools.css">
+    <link rel="stylesheet" href="./assets/app.css/style.css">
+    <link rel="stylesheet" href="./assets/app.css/responsive.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <div class="nav__icon-bars nav__bars">
+                <i class="fas fa-bars nav__btn-icon"></i>
+            </div>
+            <div class="nav__logo">
+                <img class="nav__logo-img--yellow" src="./assets/img/landing-bottom-logo-img.png" alt="Logo">
+                <img class="nav__logo-img--white" src="./assets/img/logo-white.png" alt="Logo">
+            </div>
+            <ul class="nav__menu">
+                <li class="nav__menu-item page-current"></li>
+                <li class="nav__menu-item"></li>
+                <li class="nav__menu-item"></li>
+                <li class="nav__menu-item"></li>
+                <li class="nav__menu-item dropdown"></li>
+                <li class="nav__menu-item dropdown"></li>
+                <li class="nav__menu-item dropdown" id="nav-element"></li>
+            </ul>
+            <div class="nav__btn">
+                <div class="nav__btn-icons">
+                    <div class="nav__icon-shoping-basket">
+                        <i class="fas fa-shopping-basket nav__btn-icon"></i>
+                        <div class="basket-notify">
+                            <span>No products in the cart.</span>
+                        </div>
+                    </div>
+                    <div class="nav__icon-search">
+                        <i class="fas fa-search nav__btn-icon"></i>
+                    </div>
+                    <div class="modal-search">
+                        <i class="modal-search__btn-close fas fa-times"></i>
+                        <div class="modal-search__body">
+                            <input class="modal-search__input" type="text" placeholder="Search...">
+                            <button class="modal-search__btn-find" type="button">FIND NOW</button>
+                        </div>
+                    </div>
+                    <div class="nav__icon-bars">
+                        <i class="fas fa-bars nav__btn-icon"></i>
+                    </div>
+                    <div class="modal-bars">
+                        <i class="modal-bars__btn-close fas fa-times"></i>
+                        <img src="./assets/img/landing-bottom-logo-img.png" class="modal-bars__img-logo" alt="logo">
+                        <img src="./assets/img/sidearea-img-2.png" class="modal-bars__img-discription" alt="img-area-1">
+                        <a href="#">
+                            <img src="./assets/img/sidearea-img.jpg" class="modal-bars__img-area" alt="img-area-2">
+                        </a>
+                        <p class="modal-bars__discription">
+                            Lorem ipsum dolor sit amet, consectetuer adipis cing elit. Aenean commodo ligula eget dolor.
+                            Aenean massa. Cum sociis theme natoque
+                        </p>
+                        <div class="modal-bars__search">
+                            <span class="modal-bars__label">Find Your Destination</span>
+                            <div class="modal-bars__search-body">
+                                <input type="text" placeholder="Search...">
+                                <button>
+                                    <i class="fas fa-search"></i>
+                                </button>
+
+                            </div>
+                        </div>
+                        <footer class="modal-bars__icon">
+                            <span class="modal-bars__label">Follow Me</span>
+                            <div class="modal-bars__icon-list">
+                                <i class="fab fa-twitter"></i>
+                                <i class="fab fa-pinterest-p"></i>
+                                <i class="fab fa-facebook-f"></i>
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <div class="nav__user">
+                <i class="far fa-user-circle nav__btn-icon"></i>
+            </div>
+            <div class="modal-user">
+                <div class="modal-user-content modal--login">
+                    <div class="modal-user__header">
+                        <p class="modal__login">LOGIN</p>
+                        <p class="modal__register">REGISTER</p>
+                    </div>
+                    <div class="modal-user__body">
+                        <h2 class="user__body-titel">
+                            Sign In Here!
+                        </h2>
+                        <h3 class="user__body-discription">
+                            Log into your account in just a few simple steps.
+                        </h3>
+                        <div class="input-user__name user-input">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="User Name">
+                        </div>
+                        <div class="input-user__password user-input">
+                            <i class="fas fa-lock"></i>
+                            <input type="text" placeholder="Password">
+                        </div>
+                        <div class="user__remember">
+                            <input class="user__remember-input" id="remember-input" type="checkbox">
+                            <label for="remember-input" class="user__remember-text">Remember me</label>
+
+                        </div>
+                        <p class="user__action">Lost Your password?</p>
+                        <button class="user__btn">SIGN IN</button>
+                        <div class="user-login-social">
+                            Sign in with Facebook or Google+
+                        </div>
+                    </div>
+                    <div class="modal-user__footer">
+                        <button class="modal-user__footer-btn "><span class="user__footer-text">FACEBOOK</span></button>
+                        <button class="modal-user__footer-btn "><span class="user__footer-text">GOOGLE+</span></button>
+                    </div>
+                </div>
+                <div class="modal-user-content modal--register">
+                    <div class="modal-user__header">
+                        <p class="modal__login">LOGIN</p>
+                        <p class="modal__register">REGISTER</p>
+                    </div>
+                    <div class="modal-user__body">
+                        <h2 class="user__body-titel">
+                            Register Now!
+                        </h2>
+                        <h3 class="user__body-discription">
+                            Join the SetSail community today & set up a free account.
+                        </h3>
+                        <div class="input-user__name user-input">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="User Name">
+                        </div>
+                        <div class="input-user__password user-input">
+                            <i class="far fa-envelope"></i>
+                            <input type="email" placeholder="Email">
+                        </div>
+                        <div class="input-user__password user-input">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Password">
+                        </div>
+                        <div class="input-user__password user-input">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Repeat Password">
+                        </div>
+                        <button class="user__btn">REGISTER</button>
+                    </div>
+                </div>
+        </nav>
+        <div class="header__slide">
+            <div class="header__slide-list"></div>
+            <div class="hearder__slide-btn-control">
+                <div class="slide__btn-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="slide__btn-next">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="main__tour-list">
+            <div class="owl-carousel owl-theme">
+            </div>
+        </div>
+        <div class="main-tour-details">
+            <div class="tour-details-header">
+                <span class="tour-details-tagline">Try Now</span>
+                <h2 class="tour-details-title">Winter Sports</h2>
+            </div>
+            <div class="tour-details-content">
+                <div class="tour-introduce-video" id="playvideo">
+                    <img src="./assets/img/h-skiing-video-1.jpg" alt="">
+                    <i class="tour-introduce-video-icon fas fa-play"></i>
+                    <div class="modal-video-tour"></div>
+                </div>
+                <p class="tour-details-discription">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In, dolore tempore quisquam vel quasi
+                    blanditiis eligendi et veniam ipsam, molestiae magnam aspernatur pariatur laborum expedita
+                    consectetur dicta temporibus nihil. Facilis.
+                </p>
+                <button class="tour-details-btn">VIEW MORE</button>
+            </div>
+        </div>
+        <div class="main__review">
+            <div class="main__review-header">
+                <div class="main__review-title">Top Reviews</div>
+                <div class="main__review-discription">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt officia fuga, laboriosam ab magnam
+                    iusto nostrum aliquid
+                </div>
+            </div>
+            <div class=" owl-carousel owl-theme main__review-list">
+            </div>
+        </div>
+        <div class="main-section">
+            <div class="main-section-header">
+                <span class="section-tagline">Enjoy Your</span>
+                <h1 class="section-title">Winter Holiday</h1>
+                <p class="section-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                    eget dolor lorem ipsum.</p>
+            </div>
+            <div class="main-section-content">
+                <div class="section-content-list">
+                    <div class="section-content-item">
+                        <div class="sc-item-icon">
+                            <img src="./assets/img/h1-custom-icon-img-1.png" alt="" class="sc-item-icon-img">
+                        </div>
+                        <div class="sc-item-wraper">
+                            <h3 class="sc-wraper-title">Restaurants</h3>
+                            <p class="sc-wraper-text">Aenean commodo ligula eget dolor. Lorem ipsum</p>
+                        </div>
+                    </div>
+                    <div class="section-content-item">
+                        <div class="sc-item-icon">
+                            <img src="./assets/img/h1-custom-icon-img-2.png" alt="" class="sc-item-icon-img">
+                        </div>
+                        <div class="sc-item-wraper">
+                            <h3 class="sc-wraper-title">Sightseeing</h3>
+                            <p class="sc-wraper-text">Aenean commodo ligula eget dolor. Lorem ipsum</p>
+                        </div>
+                    </div>
+                    <div class="section-content-item">
+                        <div class="sc-item-icon">
+                            <img src="./assets/img/h1-custom-icon-img-3.png" alt="" class="sc-item-icon-img">
+                        </div>
+                        <div class="sc-item-wraper">
+                            <h3 class="sc-wraper-title">Shops & Boutiques</h3>
+                            <p class="sc-wraper-text">Aenean commodo ligula eget dolor. Lorem ipsum</p>
+                        </div>
+                    </div>
+                    <div class="section-content-item">
+                        <div class="sc-item-icon">
+                            <img src="./assets/img/h1-custom-icon-img-4.png" alt="" class="sc-item-icon-img">
+                        </div>
+                        <div class="sc-item-wraper">
+                            <h3 class="sc-wraper-title">Where to Stay</h3>
+                            <p class="sc-wraper-text">Aenean commodo ligula eget dolor. Lorem ipsum</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-team-inner">
+            <div class="owl-carousel owl-theme">
+                <div class="main-team-item">
+                    <div class="team-img">
+                        <img src="./assets/img/our-team-img-6-1.jpg" alt="">
+                    </div>
+                    <div class="team-social-inner">
+                        <h5 class="team-name">Joe Avery</h5>
+                        <p class="team-text">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem lorem
+                        </p>
+                        <div class="team-contact">
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-pinterest-p"></i>
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-team-item">
+                    <div class="team-img">
+                        <img src="./assets/img/our-team-img-7-1.jpg" alt="">
+                    </div>
+                    <div class="team-social-inner">
+                        <h5 class="team-name">Joe Avery</h5>
+                        <p class="team-text">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem lorem
+                        </p>
+                        <div class="team-contact">
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-pinterest-p"></i>
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-team-item">
+                    <div class="team-img">
+                        <img src="./assets/img/our-team-img-8-1.jpg" alt="">
+                    </div>
+                    <div class="team-social-inner">
+                        <h5 class="team-name">Joe Avery</h5>
+                        <p class="team-text">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem lorem
+                        </p>
+                        <div class="team-contact">
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-pinterest-p"></i>
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-team-item">
+                    <div class="team-img">
+                        <img src="./assets/img/our-team-img-9.jpg" alt="">
+                    </div>
+                    <div class="team-social-inner">
+                        <h5 class="team-name">Joe Avery</h5>
+                        <p class="team-text">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem lorem
+                        </p>
+                        <div class="team-contact">
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-pinterest-p"></i>
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-team-counter">
+                <div class="main-team-counter-item">
+                    <span class="main-team-counter-result">452</span>
+                    <h5 class="main-team-counter-title">Tourists</h5>
+                </div>
+                <div class="main-team-counter-item">
+                    <span class="main-team-counter-result">120</span>
+                    <h5 class="main-team-counter-title">Years</h5>
+                </div>
+                <div class="counter-space"></div>
+                <div class="main-team-counter-item">
+                    <span class="main-team-counter-result">283</span>
+                    <h5 class="main-team-counter-title">Cottages</h5>
+                </div>
+                <div class="main-team-counter-item">
+                    <span class="main-team-counter-result">197</span>
+                    <h5 class="main-team-counter-title">Restaurants</h5>
+                </div>
+            </div>
+        </div>
+        <div class="main-section main-section-resort">
+            <div class="main-section-header">
+                <span class="section-tagline">Choose Your</span>
+                <h1 class="section-title">Winter Resort</h1>
+                <p class="section-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                    eget dolor lorem ipsum.</p>
+            </div>
+            <div class="main-section-content">
+                <div class="section-content-list">
+                    <div class="section-content-item">
+                        <a href="">
+                            <div class="content-item-link">
+                                <img src="./assets/img/destinations-featured-img-8-1.jpg" alt="" class="ci-link-img">
+                                <p class="sc-item-title">Slovenia</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="section-content-item">
+                        <a href="">
+                            <div class="content-item-link">
+                                <img src="./assets/img/destinations-featured-img-9-1.jpg" alt="" class="ci-link-img">
+                                <p class="sc-item-title">France</p>
+                            </div>
+                            <div class="content-item-link-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="section-content-item">
+                        <a href="">
+                            <div class="content-item-link">
+                                <img src="./assets/img/destinations-featured-img-10-1.jpg" alt="" class="ci-link-img">
+                                <p class="sc-item-title">Switferland</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="grid-col-3 footer-content-item ">
+                <div class="footer-logo">
+                    <img src="./assets/img/landing-bottom-logo-img.png" alt="" class="footer-logo-img">
+                    <p class="footer-logo-text">
+                        Lorem ipsum dolor sit ametco nsec te tuer adipiscing elitae
+                    </p>
+                </div>
+                <div class="footer-contact">
+                    <span class="contact-item">
+                        <i class="far fa-envelope"></i>
+                        setsail@qode.com
+                    </span>
+                    <span class="contact-item">
+                        <i class="far fa-envelope"></i>
+                        1 562 867 5309
+                    </span>
+                    <span class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Broadway & Morris St, New York
+                    </span>
+                </div>
+            </div>
+            <div class="grid-col-3 footer-content-item posts-recent">
+                <div class="posts-recent-title">
+                    <span>Our Recent Posts</span>
+                </div>
+                <div class="post-item">
+                    <h5 class="post-item-title">
+                        Visit Thailand, Bali And China
+                    </h5>
+                    <p class="post-item-date-publish">
+                        September 7,2016
+                    </p>
+                </div>
+                <div class="post-item">
+                    <h5 class="post-item-title">
+                        The Sound Of Our Jungle
+                    </h5>
+                    <p class="post-item-date-publish">
+                        September 7, 2016
+                    </p>
+                </div>
+                <div class="post-item">
+                    <h5 class="post-item-title">
+                        Visit Thailand, Bali And China
+                    </h5>
+                    <p class="post-item-date-publish">
+                        September 7,2016
+                    </p>
+                </div>
+            </div>
+            <div class="footer-content-space"></div>
+            <div class="grid-col-3 footer-content-item footer-subscribe">
+                <div class="subscribe-title">
+                    <span>Subscribe to our Newsletter</span>
+                </div>
+                <p class="subscribe-text">
+                    Etiam rhoncus. Maecenas temp us, tellus eget condimentum rho
+                </p>
+                <div class="subscribe-btn">
+                    <div class="subscribe-btn-item">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Name">
+                    </div>
+                    <div class="subscribe-btn-item">
+                        <i class="far fa-envelope"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <button>SUBSCRIBE</button>
+                </div>
+            </div>
+            <div class="grid-col-3 footer-content-item footer-instagram">
+                <h4 class="footer-instagram-title">Our Instagram</h4>
+                <p class="footer-instagram-text">
+                    <span>
+                        Aliquam lorem ante, dapibus inviver raqui feugiat a, tellus. Phasellus null
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="footer-powered">
+            <p class="footer-powered-text">
+                Powered by @ <a href="#">Qode Interactive 2018</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="./assets/app.js/handleNav.js"></script>
+    <script src="./assets/app.js/handleSlide.js"></script>
+    <script src="./assets/app.js/handalVideo.js"></script>
+</body>
+
+</html>
