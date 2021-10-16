@@ -152,6 +152,8 @@
         margin: 21px 0 0;
         text-align: center;
     }
+
+    /* ----------------------------------------- */
 }
 
 @media (max-width: 940px) {
@@ -286,6 +288,23 @@
     .main__review-title {
         font-size: 34px;
     }
+
+    /* ------------------------------------------ */
+    .main-section-resort .section-content-list {
+        flex-direction: column;
+    }
+
+    .section-content-item + .section-content-item {
+        margin: 45px 0 0;
+    }
+
+    .footer-content-item {
+        width: 100%;
+    }
+
+    .footer-content-item + .footer-content-item {
+        margin: 48px 0 0;
+    }
 }
 
 @media (max-width: 479px) {
@@ -328,5 +347,5 @@
         font-size: 35px;
     }
 
-    
+    /* --------------------------------------------- */
 }
