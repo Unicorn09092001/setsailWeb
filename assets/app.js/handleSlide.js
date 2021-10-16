@@ -325,3 +325,14 @@ $(document).ready(function(){
     }
 })
 });
+
+document.querySelector("#playvideo").onclick = function( ) {
+    document.querySelector(".modal-video-tour").style.display = 'flex';
+}
+
+
+document.onclick = function(e) {
+   if(e.target === document.querySelector(".modal-video-tour")) {
+       document.querySelector(".modal-video-tour").style.display = 'none';
+   }
+}
