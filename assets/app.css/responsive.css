@@ -179,6 +179,7 @@
     }
     
     .counter-space {
+        display: block;
         height: 47px;
         width: 100%;
     }

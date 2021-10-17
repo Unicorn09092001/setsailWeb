@@ -330,9 +330,13 @@ document.querySelector("#playvideo").onclick = function( ) {
     document.querySelector(".modal-video-tour").style.display = 'flex';
 }
 
-
+// Document click 
 document.onclick = function(e) {
    if(e.target === document.querySelector(".modal-video-tour")) {
        document.querySelector(".modal-video-tour").style.display = 'none';
    }
+   if(e.target === document.querySelector('.modal-user')) {
+    document.querySelector('.modal-user').style.display = 'none';
+    document.querySelector('.modal--register').style.display = 'none';
+}
 }

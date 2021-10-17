@@ -287,6 +287,19 @@ body {
     background-color: var(--turquoise-color);
 }
 
+.nav__menu-item.page-current .dropdown__item:nth-of-type(2) .dropdown__item-text {
+    color: var(--turquoise-color);
+}
+
+#nav-element .dropdown__item > .abc {
+    margin: 0 0 12px;
+}
+#nav-element .dropdown__item > .abc .dropdown__item-text {
+    color: var(--turquoise-color);
+    text-transform: uppercase;
+    font-weight: 600;
+   
+}
 /* ------------------------------------------------- */
 
 .nav__btn {
@@ -567,6 +580,7 @@ body {
 .dropdown__item {
     line-height: 35px;
     position: relative;
+    box-sizing: border-box;
 }
 
 .dropdown__item:not(.dropdown) i {
@@ -1137,6 +1151,10 @@ body {
 
 .main-team-counter-item {
     text-align: center;
+}
+
+.counter-space {
+    display: none;
 }
 
 .main-team-counter-result {

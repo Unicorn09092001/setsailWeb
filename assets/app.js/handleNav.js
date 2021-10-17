@@ -319,13 +319,6 @@ function modalLoginRegister() {
             document.querySelector('.modal-user').style.display = 'block';
             document.querySelector('.modal--login').style.display = 'block';
         }
-        
-        document.onclick = function(e) {
-            if(e.target === document.querySelector('.modal-user')) {
-                document.querySelector('.modal-user').style.display = 'none';
-                document.querySelector('.modal--register').style.display = 'none';
-            }
-        }
     
         const loginBtn = document.querySelectorAll('.modal__login')[1];
         const registerBtn = document.querySelector('.modal__register');
