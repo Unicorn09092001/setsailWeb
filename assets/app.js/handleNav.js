@@ -245,69 +245,67 @@ var mqlTaplet = window.matchMedia('(max-width: 1025px)')
 //navMenuMobil(mqlTaplet);
 mqlTaplet.addEventListener('change', navMenuMobil)
 function navMenuMobil(mql) {
-    if(mql.matches) {
-        myfunction();
-    } else {
-        // document.querySelector('.nav__menu').style.height = '80px'
-        // document.querySelector('.nav__menu').style.display = 'flex'
+    if(!mql.matches) {
+        document.querySelector('.nav__menu').style.height = '80px'
+        document.querySelector('.nav__menu').style.display = 'flex'
     }
 }
 
-function myfunction() {
-    document.querySelector('.nav__menu').onclick = function(e) {
-        if(e.target === document.querySelector('.nav__menu')) {
-             removeDropdow();
-             document.querySelector('.nav__menu').style.height = '292px'
-        }
-     } 
-     Array.from(navMenuItems).forEach(function(navMenuItem) {
-         navMenuItem.addEventListener('click', function(e) {
-             document.querySelector('.nav__menu').style.height = '342px';
-             if(e.target === document.querySelector('.Item--current')) {
-                 removeDropdow();
-                 document.querySelector('.nav__menu').style.height = '292px'
-             } else {
-                 removeDropdow();
-                 navMenuItem.classList.add('Item--current');
-                 document.querySelector('.Item--current .menu__dropdown').style.display = 'block';
-                 document.querySelector('.Item--current > .dropdown-icon').classList.remove('fa-angle-right');
-                 document.querySelector('.Item--current > .dropdown-icon').classList.add('fa-angle-down');
-             }
-         })
-     }) 
+// function myfunction() {
+//     document.querySelector('.nav__menu').onclick = function(e) {
+//         if(e.target === document.querySelector('.nav__menu')) {
+//              removeDropdow();
+//              document.querySelector('.nav__menu').style.height = '292px'
+//         }
+//      } 
+//      Array.from(navMenuItems).forEach(function(navMenuItem) {
+//          navMenuItem.addEventListener('click', function(e) {
+//              document.querySelector('.nav__menu').style.height = '342px';
+//              if(e.target === document.querySelector('.Item--current')) {
+//                  removeDropdow();
+//                  document.querySelector('.nav__menu').style.height = '292px'
+//              } else {
+//                  removeDropdow();
+//                  navMenuItem.classList.add('Item--current');
+//                  document.querySelector('.Item--current .menu__dropdown').style.display = 'block';
+//                  document.querySelector('.Item--current > .dropdown-icon').classList.remove('fa-angle-right');
+//                  document.querySelector('.Item--current > .dropdown-icon').classList.add('fa-angle-down');
+//              }
+//          })
+//      }) 
     
-     function removeDropdow() {
-         Array.from(navMenuItems).forEach(function(navMenuItem) {
-             navMenuItem.classList.remove('Item--current');
-             navMenuItem.querySelector('.menu__dropdown').style.display = 'none';
-             navMenuItem.querySelector('.dropdown-icon').classList.add('fa-angle-right');
-             navMenuItem.querySelector('.dropdown-icon').classList.remove('fa-angle-down');
-         })
-     }
+//      function removeDropdow() {
+//          Array.from(navMenuItems).forEach(function(navMenuItem) {
+//              navMenuItem.classList.remove('Item--current');
+//              navMenuItem.querySelector('.menu__dropdown').style.display = 'none';
+//              navMenuItem.querySelector('.dropdown-icon').classList.add('fa-angle-right');
+//              navMenuItem.querySelector('.dropdown-icon').classList.remove('fa-angle-down');
+//          })
+//      }
      
-     Array.from(document.querySelectorAll('.dropdown__item.dropdown')).forEach(function(dropdown) {
-         dropdown.addEventListener('click', function(e) {
-             if(e.target === document.querySelector('.dropdown--current .abc')) {
-                 removeDropdown1();
-             } else {
-                 removeDropdown1();
-                 dropdown.classList.add('dropdown--current');
-                 document.querySelector('.dropdown--current .menu__dropdown-1').style.display = 'block';
-                 document.querySelector('.dropdown--current .dropdown-icon').classList.remove('fa-angle-right');
-                 document.querySelector('.dropdown--current .dropdown-icon').classList.add('fa-angle-down');
-             }
-         })
-     })
+//      Array.from(document.querySelectorAll('.dropdown__item.dropdown')).forEach(function(dropdown) {
+//          dropdown.addEventListener('click', function(e) {
+//              if(e.target === document.querySelector('.dropdown--current .abc')) {
+//                  removeDropdown1();
+//              } else {
+//                  removeDropdown1();
+//                  dropdown.classList.add('dropdown--current');
+//                  document.querySelector('.dropdown--current .menu__dropdown-1').style.display = 'block';
+//                  document.querySelector('.dropdown--current .dropdown-icon').classList.remove('fa-angle-right');
+//                  document.querySelector('.dropdown--current .dropdown-icon').classList.add('fa-angle-down');
+//              }
+//          })
+//      })
      
-     function removeDropdown1() {
-         Array.from(document.querySelectorAll('.dropdown__item.dropdown')).forEach(function(dropdown) {
-             dropdown.classList.remove('dropdown--current');
-             dropdown.querySelector('.menu__dropdown-1').style.display = 'none';
-             dropdown.querySelector('.dropdown-icon').classList.remove('fa-angle-down');
-             dropdown.querySelector('.dropdown-icon').classList.add('fa-angle-right');
-         })
-     }
-}
+//      function removeDropdown1() {
+//          Array.from(document.querySelectorAll('.dropdown__item.dropdown')).forEach(function(dropdown) {
+//              dropdown.classList.remove('dropdown--current');
+//              dropdown.querySelector('.menu__dropdown-1').style.display = 'none';
+//              dropdown.querySelector('.dropdown-icon').classList.remove('fa-angle-down');
+//              dropdown.querySelector('.dropdown-icon').classList.add('fa-angle-right');
+//          })
+//      }
+// }
 
 /*----------------------- Modal Login-Register ------------------- */
 

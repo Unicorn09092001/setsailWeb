@@ -58,12 +58,12 @@
         cursor: pointer;
     }
 
-    .nav__menu-item:hover .menu__dropdown {
+    /* .nav__menu-item:hover .menu__dropdown {
         display: none;
     }
     .dropdown__item:hover .menu__dropdown-1 {
         display: none;
-    }
+    } */
     .menu__dropdown,
     .menu__dropdown-1 {
         width: 100% !important;
