@@ -247,7 +247,7 @@ mqlTaplet.addEventListener('change', navMenuMobil)
 function navMenuMobil(mql) {
     if(!mql.matches) {
         document.querySelector('.nav__menu').style.height = '80px'
-        document.querySelector('.nav__menu').style.display = 'flex'
+        document.querySelector('.nav__menu').style.display = 'block'
     }
 }
 

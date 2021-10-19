@@ -64,6 +64,23 @@
     .dropdown__item:hover .menu__dropdown-1 {
         display: none;
     } */
+
+    #nav-element:hover .menu__dropdown {
+        display: block;
+    }
+    #nav-element .menu__dropdown-1 {
+        display: none;
+    }
+    #nav-element .dropdown__item > .abc {
+        margin: 0 16px;
+    }
+    #nav-element .dropdown__item > .abc .dropdown__item-text {
+        color: #333;
+        text-transform: none;
+    }
+    .dropdown__item:hover .menu__dropdown-1 {
+        display: block !important;
+    }
     .menu__dropdown,
     .menu__dropdown-1 {
         width: 100% !important;
