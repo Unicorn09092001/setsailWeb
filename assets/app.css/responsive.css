@@ -34,16 +34,17 @@
     }
     /* ---------------- Header Nav Bar --------------- */
     .nav__menu {
-        display: none ;
-        position: absolute;
+        display: none !important;
+        /* position: absolute;
         top: 100%;
         width: 100%;
         height: 292px;
         background-color: white;
-        overflow-y: scroll;
+        overflow-y: scroll; */
     }
 
     .nav__menu-mobile {
+        display: none ;
         position: absolute;
         top: 100%;
         width: 100%;
@@ -79,9 +80,9 @@
         display: none;
     } */
 
-    #nav-element:hover .menu__dropdown {
+    /* #nav-element:hover .menu__dropdown {
         display: block;
-    }
+    } */
     #nav-element .menu__dropdown-1 {
         display: none;
     }
@@ -92,6 +93,7 @@
         color: #333;
         text-transform: none;
     }
+    
     .dropdown__item:hover .menu__dropdown-1 {
         display: none;
     }
@@ -113,6 +115,9 @@
 
     .menu__dropdown-1 .abc {
         margin-left: 32px;
+    }
+    #nav-element .menu__dropdown {
+        height: fit-content;
     }
     #nav-element .menu__dropdown > .dropdown__item:first-child {
         margin: 0;

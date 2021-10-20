@@ -230,15 +230,15 @@ dropdown2TextList.forEach(function(dropdown2Texts, index) {
 
 // Modal bars-Mobil
 
-var isOpenbarMobil = true;
+var isOpenbarMobil = false;
 
 document.querySelector('.nav__bars').addEventListener('click', function() {
-    if(isOpenbarMobil) {
+    if(!isOpenbarMobil) {
         document.querySelector('.nav__menu-mobile').style.display = 'block';
-        isOpenbarMobil = false;
+        isOpenbarMobil = true;
     } else {
         document.querySelector('.nav__menu-mobile').style.display = 'none';
-        isOpenbarMobil = true;
+        isOpenbarMobil = false;
     }
 });
 
