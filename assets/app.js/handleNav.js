@@ -84,26 +84,27 @@ const dropdownTextList= [
     ]
 ];
 
-const navMenuItems = document.querySelectorAll('.nav__menu-item');
+const navMenuItems = document.querySelectorAll('.nav__menu .nav__menu-item');
+const navMenuItemsMobile = document.querySelectorAll('.nav__menu-mobile .nav__menu-item');
 
-Array.from(navMenuItems).forEach(function(navMenuItem, indexItem) {
+navItemTexts.forEach(function(navItemText, index) {
     var htmls = `
-     
         <a href="#" class="nav-item__link">
-            <span class="nav-item-text">${navItemTexts[indexItem]}</span>
+            <span class="nav-item-text">${navItemText}</span>
         </a>
         <i class="dropdown-icon fas fa-angle-right"></i>
-        
         <ul class="menu__dropdown"></ul>
     `;
-    navMenuItem.innerHTML =  htmls;
+    navMenuItems[index].innerHTML = htmls;
+    navMenuItemsMobile[index].innerHTML = htmls;
 })
 
-const dropdownMenus = document.querySelectorAll('.menu__dropdown');
 
-Array.from(dropdownMenus).forEach(function(dropdownMenu, indexDropdown) {
-    
-    var dropdownTexts = dropdownTextList[indexDropdown];
+
+const dropdownMenus = document.querySelectorAll('.nav__menu .menu__dropdown');
+const dropdownMenusMobile = document.querySelectorAll('.nav__menu-mobile .menu__dropdown');
+
+dropdownTextList.forEach(function(dropdownTexts, index) {
     dropdownTexts.forEach(function(dropdownText) {
         var htmls = `
             <li class="dropdown__item">
@@ -115,7 +116,8 @@ Array.from(dropdownMenus).forEach(function(dropdownMenu, indexDropdown) {
                 </div>
             </li>
         `;
-        dropdownMenu.innerHTML += htmls;
+        dropdownMenus[index].innerHTML += htmls;
+        dropdownMenusMobile[index].innerHTML +=htmls;
     })
 })
 
@@ -203,16 +205,16 @@ Array.from(dropdown2).forEach(function(Item) {
 
 Array.from(document.querySelectorAll('.dropdown__item.dropdown')).forEach(function(dropdown2Item) {
     var htmls = `
-        
         <ul class="menu__dropdown-1"></ul>
     `;
     dropdown2Item.innerHTML += htmls;
 })
 
-const dropdown2Items = document.querySelectorAll('.menu__dropdown-1');
+const dropdown2Items = document.querySelectorAll('.nav__menu .menu__dropdown-1');
+const dropdown2ItemsMobile = document.querySelectorAll('.nav__menu-mobile .menu__dropdown-1');
 
-Array.from(dropdown2Items).forEach(function(dropdown2Item, indexDropdown2) {
-    dropdown2TextList[indexDropdown2].forEach(function(dropdown2Text) {
+dropdown2TextList.forEach(function(dropdown2Texts, index) {
+    dropdown2Texts.forEach(function(dropdown2Text) {
         var htmls =  `
             <div class="abc">
                 <a href="#" class="dropdown__item-link">
@@ -220,9 +222,11 @@ Array.from(dropdown2Items).forEach(function(dropdown2Item, indexDropdown2) {
                 </a>
             </div>
         `;
-        dropdown2Item.innerHTML += htmls;
+        dropdown2Items[index].innerHTML += htmls;
+        dropdown2ItemsMobile[index].innerHTML += htmls;
     })
 })
+
 
 // Modal bars-Mobil
 
@@ -230,82 +234,70 @@ var isOpenbarMobil = true;
 
 document.querySelector('.nav__bars').addEventListener('click', function() {
     if(isOpenbarMobil) {
-        document.querySelector('.nav__menu').style.display = 'block';
+        document.querySelector('.nav__menu-mobile').style.display = 'block';
         isOpenbarMobil = false;
     } else {
-        document.querySelector('.nav__menu').style.display = 'none';
+        document.querySelector('.nav__menu-mobile').style.display = 'none';
         isOpenbarMobil = true;
     }
 });
 
-// document.querySelector('.nav__menu').style.display = 'none';
-//         document.querySelector('.nav__menu').style.height = '292px' 
-
-var mqlTaplet = window.matchMedia('(max-width: 1025px)')
-//navMenuMobil(mqlTaplet);
-mqlTaplet.addEventListener('change', navMenuMobil)
-function navMenuMobil(mql) {
-    if(!mql.matches) {
-        document.querySelector('.nav__menu').style.height = '80px'
-        document.querySelector('.nav__menu').style.display = 'block'
-    }
-}
-
-// function myfunction() {
-//     document.querySelector('.nav__menu').onclick = function(e) {
-//         if(e.target === document.querySelector('.nav__menu')) {
-//              removeDropdow();
-//              document.querySelector('.nav__menu').style.height = '292px'
-//         }
-//      } 
-//      Array.from(navMenuItems).forEach(function(navMenuItem) {
-//          navMenuItem.addEventListener('click', function(e) {
-//              document.querySelector('.nav__menu').style.height = '342px';
-//              if(e.target === document.querySelector('.Item--current')) {
-//                  removeDropdow();
-//                  document.querySelector('.nav__menu').style.height = '292px'
-//              } else {
-//                  removeDropdow();
-//                  navMenuItem.classList.add('Item--current');
-//                  document.querySelector('.Item--current .menu__dropdown').style.display = 'block';
-//                  document.querySelector('.Item--current > .dropdown-icon').classList.remove('fa-angle-right');
-//                  document.querySelector('.Item--current > .dropdown-icon').classList.add('fa-angle-down');
-//              }
-//          })
-//      }) 
+myfunction();
+function myfunction() {
+    document.querySelector('.nav__menu-mobile').onclick = function(e) {
+        if(e.target === document.querySelector('.nav__menu-mobile')) {
+             removeDropdow();
+             document.querySelector('.nav__menu-mobile').style.height = '292px'
+        }
+     } 
+     Array.from(navMenuItemsMobile).forEach(function(navMenuItem) {
+         navMenuItem.addEventListener('click', function(e) {
+             document.querySelector('.nav__menu-mobile').style.height = '342px';
+             if(e.target === document.querySelector('.Item--current')) {
+                 removeDropdow();
+                 document.querySelector('.nav__menu-mobile').style.height = '292px'
+             } else {
+                 removeDropdow();
+                 navMenuItem.classList.add('Item--current');
+                 document.querySelector('.Item--current .menu__dropdown').style.display = 'block';
+                 document.querySelector('.Item--current > .dropdown-icon').classList.remove('fa-angle-right');
+                 document.querySelector('.Item--current > .dropdown-icon').classList.add('fa-angle-down');
+             }
+         })
+     }) 
     
-//      function removeDropdow() {
-//          Array.from(navMenuItems).forEach(function(navMenuItem) {
-//              navMenuItem.classList.remove('Item--current');
-//              navMenuItem.querySelector('.menu__dropdown').style.display = 'none';
-//              navMenuItem.querySelector('.dropdown-icon').classList.add('fa-angle-right');
-//              navMenuItem.querySelector('.dropdown-icon').classList.remove('fa-angle-down');
-//          })
-//      }
+     function removeDropdow() {
+         Array.from(navMenuItemsMobile).forEach(function(navMenuItem) {
+             navMenuItem.classList.remove('Item--current');
+             navMenuItem.querySelector('.menu__dropdown').style.display = 'none';
+             navMenuItem.querySelector('.dropdown-icon').classList.add('fa-angle-right');
+             navMenuItem.querySelector('.dropdown-icon').classList.remove('fa-angle-down');
+         })
+     }
      
-//      Array.from(document.querySelectorAll('.dropdown__item.dropdown')).forEach(function(dropdown) {
-//          dropdown.addEventListener('click', function(e) {
-//              if(e.target === document.querySelector('.dropdown--current .abc')) {
-//                  removeDropdown1();
-//              } else {
-//                  removeDropdown1();
-//                  dropdown.classList.add('dropdown--current');
-//                  document.querySelector('.dropdown--current .menu__dropdown-1').style.display = 'block';
-//                  document.querySelector('.dropdown--current .dropdown-icon').classList.remove('fa-angle-right');
-//                  document.querySelector('.dropdown--current .dropdown-icon').classList.add('fa-angle-down');
-//              }
-//          })
-//      })
+     Array.from(document.querySelectorAll('.nav__menu-mobile .dropdown__item.dropdown')).forEach(function(dropdown) {
+         dropdown.addEventListener('click', function(e) {
+             if(e.target === document.querySelector('.dropdown--current .abc')) {
+                 removeDropdown1();
+             } else {
+                 removeDropdown1();
+                 dropdown.classList.add('dropdown--current');
+                 document.querySelector('.dropdown--current .menu__dropdown-1').style.display = 'block';
+                 document.querySelector('.dropdown--current .dropdown-icon').classList.remove('fa-angle-right');
+                 document.querySelector('.dropdown--current .dropdown-icon').classList.add('fa-angle-down');
+             }
+         })
+     })
      
-//      function removeDropdown1() {
-//          Array.from(document.querySelectorAll('.dropdown__item.dropdown')).forEach(function(dropdown) {
-//              dropdown.classList.remove('dropdown--current');
-//              dropdown.querySelector('.menu__dropdown-1').style.display = 'none';
-//              dropdown.querySelector('.dropdown-icon').classList.remove('fa-angle-down');
-//              dropdown.querySelector('.dropdown-icon').classList.add('fa-angle-right');
-//          })
-//      }
-// }
+     function removeDropdown1() {
+         Array.from(document.querySelectorAll('.nav__menu-mobile .dropdown__item.dropdown')).forEach(function(dropdown) {
+             dropdown.classList.remove('dropdown--current');
+             dropdown.querySelector('.menu__dropdown-1').style.display = 'none';
+             dropdown.querySelector('.dropdown-icon').classList.remove('fa-angle-down');
+             dropdown.querySelector('.dropdown-icon').classList.add('fa-angle-right');
+         })
+     }
+}
 
 /*----------------------- Modal Login-Register ------------------- */
 

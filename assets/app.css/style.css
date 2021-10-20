@@ -562,7 +562,7 @@ body {
     animation: growDown ease-out 0.3s;
 }
 
-.nav__menu-item:hover .menu__dropdown {
+.nav__menu .nav__menu-item:hover .menu__dropdown {
     display: block;
 }
 
