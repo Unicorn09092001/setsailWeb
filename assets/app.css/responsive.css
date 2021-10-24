@@ -110,11 +110,13 @@
     }
     .dropdown__item .abc {
         padding: 0;
-        margin: 0 16px;
+        margin-left: 3%;
+        width: 97%;
     }
 
     .menu__dropdown-1 .abc {
-        margin-left: 32px;
+        margin-left: 6%;
+        width: 94%;
     }
     #nav-element .menu__dropdown {
         height: fit-content;
@@ -174,6 +176,11 @@
 
     .hearder__slide-btn-control {
         display: none;
+    }
+
+    #video1 {
+        height: 450px;
+        width: 800px;
     }
     /* -------------- Tour details ------------*/
     .tour-details-content{
@@ -290,6 +297,10 @@
 
     /* --------------------------------------- */
   
+    #video1 {
+        width: 550px;
+        height: 309px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -327,6 +338,10 @@
     }
 
     /* ------------------------------------------ */
+    .main-section-resort {
+        padding: 470px 0 0;
+    } 
+
     .main-section-resort .section-content-list {
         flex-direction: column;
     }
@@ -341,6 +356,13 @@
 
     .footer-content-item + .footer-content-item {
         margin: 48px 0 0;
+    }
+
+    .main-team-counter-item {
+        width: 100%;
+    }
+    .main-team-counter-item + .main-team-counter-item {
+        padding: 47px 0 0;
     }
 }
 
@@ -385,4 +407,8 @@
     }
 
     /* --------------------------------------------- */
+    #video1 {
+        width: 300px;
+        height: 168.75px;
+    }
 }

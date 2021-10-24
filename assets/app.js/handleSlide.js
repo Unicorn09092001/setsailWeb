@@ -189,22 +189,22 @@ setInterval(function() {
 }, 100)
 
 var counterResultData =  [452,120,283,197];
-var counterResults = document.querySelectorAll('.main-team-counter-result');
+var counterResults = document.querySelectorAll('.main-team-counter-value');
 
-if(window.scrollY - 500 > document.querySelector('.main-team-inner').offsetTop - document.querySelector('.team-img').clientHeight) {
-    Array.from(counterResults).forEach(function(result, index) {
-        var count = 0;
-        var Counter = setInterval(() => {
-            count++;
-            result.innerText = count;
-            if(count === counterResultData[0]) {
-                clearInterval(Counter);
-                result.innerText = counterResultData[index];
-            }
-        }, 1);
+// if(window.scrollTop  > document.querySelector('.main-team-inner').offsetTop - document.querySelector('.team-img').clientHeight) {
+//     Array.from(counterResults).forEach(function(result, index) {
+//         var count = 0;
+//         var Counter = setInterval(() => {
+//             count++;
+//             result.innerText = count;
+//             if(count === counterResultData[0]) {
+//                 clearInterval(Counter);
+//                 result.innerText = counterResultData[index];
+//             }
+//         }, 1);
         
-    })
-}
+//     })
+// }
 
 
 //Owl-carousel Main Review List
@@ -332,11 +332,32 @@ document.querySelector("#playvideo").onclick = function( ) {
 
 // Document click 
 document.onclick = function(e) {
-   if(e.target === document.querySelector(".modal-video-tour")) {
-       document.querySelector(".modal-video-tour").style.display = 'none';
-   }
-   if(e.target === document.querySelector('.modal-user')) {
-    document.querySelector('.modal-user').style.display = 'none';
-    document.querySelector('.modal--register').style.display = 'none';
+    if(e.target === document.querySelector(".modal-video-tour")) {
+        document.querySelector(".modal-video-tour").style.display = 'none';
+    }
+    if(e.target === document.querySelector('.modal-user')) {
+        document.querySelector('.modal-user').style.display = 'none';
+        document.querySelector('.modal--register').style.display = 'none';
+    }
 }
+
+// -------------------
+jQuery(window).scroll(startCounter);
+function startCounter() {
+    var hT = jQuery('.main-team-counter-value').offset().top,
+        hH = jQuery('.main-team-counter-value').outerHeight(),
+        wH = jQuery(window).height();
+    if (jQuery(window).scrollTop() > hT+hH-wH) {
+        jQuery(window).off("scroll", startCounter);
+        jQuery('.love_count').each(function () {
+            var $this = jQuery(this);
+            jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
+                duration: 2000,
+                easing: 'swing',
+                step: function () {
+                    $this.text(Math.ceil(this.Counter) + '%');
+                }
+            });
+        });
+    }
 }
