@@ -19,6 +19,19 @@
     <link rel="stylesheet" href="./assets/app.css/tools.css">
     <link rel="stylesheet" href="./assets/app.css/style.css">
     <link rel="stylesheet" href="./assets/app.css/responsive.css">
+
+    <meta property="og:title" content="Tiêu đề khi chia sẻ" />
+    <meta property="og:description" content="Mô tả xuất hiện khi chia sẻ trên mạng xã hội." />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta property="og:image" content="https://yourdomain.com/share-image.jpg" />
+    <script>
+        const domain = window.location.hostname;
+        if (domain.includes("unicorn09092001")) {
+            document.querySelector('meta[property="og:title"]').setAttribute("content", "Tiêu đề cho Domain 1");
+        } else if (domain === "domain2.com") {
+            document.querySelector('meta[property="og:title"]').setAttribute("content", "Tiêu đề cho Domain 2");
+        }
+    </script>
 </head>
 
 <body>
